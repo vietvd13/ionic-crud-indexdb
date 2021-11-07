@@ -273,15 +273,23 @@ const Update: React.FC = () => {
           {/* Select Property type */}
           <IonRow>
             <IonCol>
-              <IonLabel position="stacked">Property type</IonLabel>
+              <IonLabel position="stacked">
+                Property type
+              </IonLabel>
               <IonSelect
                 value={propertyType}
                 onIonChange={event => setPropertyType(event.detail.value)}
                 placeholder="Please select"
               >
-                <IonSelectOption value="Flat">Flat</IonSelectOption>
-                <IonSelectOption value="House">House</IonSelectOption>
-                <IonSelectOption value="Bungalow">Bungalow</IonSelectOption>
+                <IonSelectOption value="Flat">
+                  Flat
+                </IonSelectOption>
+                <IonSelectOption value="House">
+                  House
+                </IonSelectOption>
+                <IonSelectOption value="Bungalow">
+                  Bungalow
+                </IonSelectOption>
               </IonSelect>
             </IonCol>
           </IonRow>
@@ -301,7 +309,9 @@ const Update: React.FC = () => {
           {/* Date and time of adding the Property */}
           <IonRow>
             <IonCol>
-              <IonLabel position="stacked">Date and time of adding the Property</IonLabel>
+              <IonLabel position="stacked">
+                Date and time of adding the Property
+              </IonLabel>
               <IonDatetime
                 value={dateTimeAdding}
                 onIonChange={event => setDateTimeAdding(event.detail.value!)} 
@@ -314,7 +324,9 @@ const Update: React.FC = () => {
           {/* Monthly rent price */}
           <IonRow>
             <IonCol>
-              <IonLabel position="stacked">Monthly rent price</IonLabel>
+              <IonLabel position="stacked">
+                Monthly rent price
+              </IonLabel>
               <IonInput
                 value={monthlyRentPrice}
                 onIonChange={event => setMonthlyRentPrice(event.detail.value!)} 
@@ -326,24 +338,36 @@ const Update: React.FC = () => {
           {/* Furniture types */}
           <IonRow>
             <IonCol>
-              <IonLabel position="stacked">Furniture types</IonLabel>
-              <IonRadioGroup value={furnitureTypes} onIonChange={event => setFurnitureTypes(event.detail.value)} style={{ marginTop: '10px' }}>
+              <IonLabel position="stacked">
+                Furniture types
+              </IonLabel>
+              <IonRadioGroup 
+                value={furnitureTypes} 
+                onIonChange={event => setFurnitureTypes(event.detail.value)} 
+                style={{ marginTop: '10px' }}
+              >
               <IonItem>
-                <IonLabel><small>Furnished</small></IonLabel>
+                <IonLabel>
+                  <small>Furnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="Furnished"
                 ></IonRadio>
               </IonItem>
               <IonItem>
-                <IonLabel><small>Unfurnished</small></IonLabel>
+                <IonLabel>
+                  <small>Unfurnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="Unfurnished"
                 ></IonRadio>
               </IonItem>
               <IonItem>
-                <IonLabel><small>Part Furnished</small></IonLabel>
+                <IonLabel>
+                  <small>Part Furnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="PartFurnished"
@@ -379,7 +403,11 @@ const Update: React.FC = () => {
 
           <IonRow>
             <IonCol>
-              <IonButton size="small" expand="block" onClick={handleSubmit}>
+              <IonButton 
+                size="small" 
+                expand="block" 
+                onClick={handleSubmit}
+              >
                   <IonIcon 
                     slot="icon-only" 
                     icon={add}
@@ -393,7 +421,13 @@ const Update: React.FC = () => {
       </IonContent>
 
       {/* Start Toast */}
-      <IonToast isOpen={showToast} header={headerMessage} message={message} color={colorMessage} position="top"></IonToast>
+      <IonToast 
+        isOpen={showToast} 
+        header={headerMessage} 
+        message={message} 
+        color={colorMessage} 
+        position="top"
+      ></IonToast>
       {/* End Toast */}
 
     </IonPage>

@@ -38,7 +38,7 @@ import { insertApartment } from '../databaseHandler';
   const newDate = new Date(date);
   const year = newDate.getFullYear();
   const month = (newDate.getMonth() + 1);
-  const day = newDate.getDay();
+  const day = newDate.getDate();
   
 
   return joinDate(year, month, day);
@@ -255,9 +255,15 @@ const Create: React.FC = () => {
                 onIonChange={event => setPropertyType(event.detail.value)}
                 placeholder="Please select"
               >
-                <IonSelectOption value="Flat">Flat</IonSelectOption>
-                <IonSelectOption value="House">House</IonSelectOption>
-                <IonSelectOption value="Bungalow">Bungalow</IonSelectOption>
+                <IonSelectOption value="Flat">
+                  Flat
+                </IonSelectOption>
+                <IonSelectOption value="House">
+                  House
+                </IonSelectOption>
+                <IonSelectOption value="Bungalow">
+                  Bungalow
+                </IonSelectOption>
               </IonSelect>
             </IonCol>
           </IonRow>
@@ -276,7 +282,9 @@ const Create: React.FC = () => {
           {/* Date and time of adding the Property */}
           <IonRow>
             <IonCol>
-              <IonLabel position="stacked">Date and time of adding the Property</IonLabel>
+              <IonLabel position="stacked">
+                Date and time of adding the Property
+              </IonLabel>
               <IonDatetime
                 onIonChange={event => setDateTimeAdding(event.detail.value!)} 
                 display-format="YYYY/MM/DD" 
@@ -300,23 +308,32 @@ const Create: React.FC = () => {
           <IonRow>
             <IonCol>
               <IonLabel position="stacked">Furniture types</IonLabel>
-              <IonRadioGroup onIonChange={event => setFurnitureTypes(event.detail.value)} style={{ marginTop: '10px' }}>
+              <IonRadioGroup 
+                onIonChange={event => setFurnitureTypes(event.detail.value)} 
+                style={{ marginTop: '10px' }}
+              >
               <IonItem>
-                <IonLabel><small>Furnished</small></IonLabel>
+                <IonLabel>
+                  <small>Furnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="Furnished"
                 ></IonRadio>
               </IonItem>
               <IonItem>
-                <IonLabel><small>Unfurnished</small></IonLabel>
+                <IonLabel>
+                  <small>Unfurnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="Unfurnished"
                 ></IonRadio>
               </IonItem>
               <IonItem>
-                <IonLabel><small>Part Furnished</small></IonLabel>
+                <IonLabel>
+                  <small>Part Furnished</small>
+                </IonLabel>
                 <IonRadio 
                   slot="start" 
                   value="PartFurnished"
@@ -350,7 +367,11 @@ const Create: React.FC = () => {
 
           <IonRow>
             <IonCol>
-              <IonButton size="small" expand="block" onClick={handleSubmit}>
+              <IonButton 
+                size="small" 
+                expand="block" 
+                onClick={handleSubmit}
+              >
                   <IonIcon 
                     slot="icon-only" 
                     icon={add}
@@ -364,7 +385,13 @@ const Create: React.FC = () => {
       </IonContent>
 
       {/* Start Toast */}
-      <IonToast isOpen={showToast} header={headerMessage} message={message} color={colorMessage} position="top"></IonToast>
+      <IonToast 
+        isOpen={showToast} 
+        header={headerMessage} 
+        message={message} 
+        color={colorMessage} 
+        position="top"
+      ></IonToast>
       {/* End Toast */}
 
     </IonPage>

@@ -63,7 +63,12 @@ const Home: React.FC = () => {
 
           <IonRow>
             <IonCol>
-              <IonButton size="small" color="primary" href="/create" expand="block">
+              <IonButton 
+                size="small" 
+                color="primary" 
+                href="/create" 
+                expand="block"
+              >
                 <IonIcon slot="start" icon={addCircle}></IonIcon>
                 Create new
               </IonButton>
@@ -73,7 +78,9 @@ const Home: React.FC = () => {
           {listApartment &&
             listApartment.map((apartment, index) => 
               <IonCard key={index}>
-                <IonCardHeader>Aparment ID: #{ apartment.id }</IonCardHeader>
+                <IonCardHeader>
+                  Aparment ID: #{ apartment.id }
+                </IonCardHeader>
                 <IonCardContent>
                   <h6>Property Type: { apartment.propertyType }</h6>
                   <h6>Bed Rooms: { apartment.bedrooms }</h6>
@@ -112,7 +119,13 @@ const Home: React.FC = () => {
         </IonGrid>
       </IonContent>
 
-      <IonToast isOpen={showToast} header="Success" message="You have successfully deleted" color="success" position="top"></IonToast>
+      <IonToast 
+        isOpen={showToast} 
+        header="Success" 
+        message="You have successfully deleted" 
+        color="success" 
+        position="top"
+      ></IonToast>
 
     </IonPage>
   );
